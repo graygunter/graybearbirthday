@@ -9,15 +9,29 @@ h1 {
     font-size: 5em;
     color: black;
     text-transform: uppercase;
+}
+
+.hide {
+    display: none;
+}
+
+.blink {
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+      opacity: 0;
   }
+}
   
-span {
-border-right: .05em solid;
-animation: caret 1s steps(1) infinite;
+span span {
+    border-right: .05em solid;
+    animation: caret 1s steps(1) infinite;
 }
 
 @keyframes caret {
-50% {
-    border-color: transparent;
-}
+    50% {
+        border-color: transparent;
+    }
 }

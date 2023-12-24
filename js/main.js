@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded',function(event){
         // add next character to h1
         
         if(loop == 0)
-          document.querySelector("p.one span").innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
+          document.querySelector("p.one span").innerHTML = text.substring(0, i+1) +'<span></span>';
           
         if(loop == 1) {
 
@@ -21,16 +21,19 @@ document.addEventListener('DOMContentLoaded',function(event){
 
           setTimeout(function() {document.querySelector("p.two").classList.remove("hide")}, 1000);
 
-          setTimeout(function() {document.querySelector("p.two span").innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>'}, 2000);
+          setTimeout(function() {document.querySelector("p.two span").innerHTML = text.substring(0, i+1) +'<span></span>'}, 2000);
         }
 
         if(loop == 2) {
 
-					document.querySelector("p.two span span").classList.add("hide");
+          setTimeout(function() {document.querySelector("p.two span span").classList.add("hide")}, 2000);
 
           setTimeout(function() {document.querySelector("p.three").classList.remove("hide")}, 2000);
 
-          setTimeout(function() {document.querySelector("p.three span").innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>'}, 3000);
+          setTimeout(function() {document.querySelector("p.three span").innerHTML = text.substring(0, i+1) +'<span></span>'}, 3000);
+
+          setTimeout(screenTwo, 6000);
+
         }
   
         // wait for a while and call this function again for next character
@@ -50,21 +53,40 @@ document.addEventListener('DOMContentLoaded',function(event){
 
        console.log("loop = " + loop);
 
-       if (typeof dataText[i] == 'undefined'){
-          setTimeout(function() {
-            StartTextAnimation(0);
-          }, 20000);
-       }
-       // check if dataText[i] exists
-      if (i < dataText[i].length) {
-        // text exists! start typewriter animation
-       typeWriter(dataText[i], 0, function(){
-         // after callback (and whole text has been animated), start next text
-         StartTextAnimation(i + 1);
-       });
-      }
+			if(loop < dataText.length) {
+				if (typeof dataText[i] == 'undefined'){
+						setTimeout(function() {
+							StartTextAnimation(0);
+						}, 20000);
+				}
+				// check if dataText[i] exists
+				if (i < dataText[i].length) {
+					// text exists! start typewriter animation
+				typeWriter(dataText[i], 0, function(){
+					// after callback (and whole text has been animated), start next text
+					StartTextAnimation(i + 1);
+				});
+				}
+			}
     }
     // start the text animation
     setTimeout(function() {StartTextAnimation(0)}, 1000);
   });
   
+	function screenTwo() {
+	
+		document.querySelector("#screen1").classList.add("hide");
+		document.querySelector("#screen2").classList.remove("hide");
+
+		setTimeout(screenThree, 6000);
+
+	}
+
+	function screenThree() {
+	
+		document.querySelector("#screen2").classList.add("hide");
+		document.querySelector("#screen3").classList.remove("hide");
+
+		stop();
+
+	}

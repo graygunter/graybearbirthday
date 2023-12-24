@@ -1,18 +1,32 @@
-#container {
-    display: block;
-    margin: 0 auto;
-    width: 70%;
-    max-width: 500px;
+body {
+  background-color: #042c00;
+  position: relative;
 }
 
-h1 {
-    font-size: 5em;
-    color: black;
-    text-transform: uppercase;
+#filter {
+  background: url(img/noise.jpg) repeat;
+  display: static;
+  opacity: 0.1;
+  position: static;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.container {
+    color: #f4f4f4;
+    display: block;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 3EM;
+    margin: 0 auto;
+    position: relative;
+    width: 70%;
+    max-width: 1000px;
+    z-index: 2;
 }
 
 .hide {
-    display: none;
+    display: none !important;
 }
 
 .blink {
@@ -30,8 +44,18 @@ span span {
     animation: caret 1s steps(1) infinite;
 }
 
+p.three span span {
+  border: none;
+}
+
 @keyframes caret {
     50% {
         border-color: transparent;
     }
+}
+
+
+#screen1 {
+  color: #f4f4f4;
+  position: relative;
 }

@@ -7,8 +7,6 @@
         <meta name="HandheldFriendly" content="true" />
         <meta property="og:title" content="Basic Bitch Birthday"/>
         <meta property="og:image" content="https://graybearbirthday.netlify.app/og-image.jpg"/>
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="1200" />
         <meta property="og:url" content="https://graybearbirthday.netlify.app/"/>
         <meta property="og:site_name" content="Basic Bitch Birthday"/>
         <meta property="og:type" content="website"/>
@@ -21,15 +19,32 @@
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
 
         <title>Basic Bitch Birthday</title>
     </head>
     <body>
-        <div id="container">
-            <p class="one">C:\> <span><span></span></span></p>
-            <p class="two hide">C:\BIRTHDAY\> <span><span></span></span></p>
-            <p class="three hide">C:\BIRTHDAY\> LOADING<span class="blink"></span></p>
+        <div id="filter"></div>
+        <div id="screen1">
+            <div class="container">
+                <p class="one">C:\> <span><span></span></span></p>
+                <p class="two hide">C:\>BIRTHDAY\><span><span></span></span></p>
+                <p class="three hide">C:\BIRTHDAY\> LOADING<span class="blink"></span></p>
+            </div>
+        </div>
+        <div id="screen2" class="container hide">
+            <div class="container">
+                <p>Screen 2</p>
+            </div>
+        </div>
+        <div id="screen3" class="container hide">
+            <div class="container">
+                <p>Screen 3</p>
+            </div>
         </div>
         <script type="text/javascript" src="js/main.js"></script>
     </body>

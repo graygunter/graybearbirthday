@@ -1,16 +1,12 @@
 body {
   background-color: #042c00;
+  background: url(img/noise.jpg) repeat;
   position: relative;
 }
 
-#filter {
-  background: url(img/noise.jpg) repeat;
-  display: static;
-  opacity: 0.1;
-  position: static;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
+body.screen2 {
+  background: blue;
+  color: #f4f4f4;
 }
 
 .container {
@@ -57,5 +53,48 @@ p.three span span {
 
 #screen1 {
   color: #f4f4f4;
+  opacity: 0.6;
+  padding-top: 5%;
   position: relative;
+}
+
+#screen2 .container {
+  background: url(img/screen2.png) #858585 no-repeat center;
+  border: 5px solid #000;
+  color: #2c2c2c;
+  padding: 1%;
+  text-align: center;
+}
+
+#screen2 .container .primary {
+  font-size: 2em;
+}
+
+#screen2 .container .secondary {
+  font-size: 1em;
+}
+
+#screen3 .container {
+  color: #d6d6d6;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.75em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+#screen3 .container p {
+  margin: 0;
+  padding: 0 0 10px 0;
+}
+
+#screen3 .container .indent {
+  padding-left: 1%;
+}
+
+#screen3 .container .white {
+  color: #fff;
+}
+
+#screen3 .container .yellow {
+  color: yellow;
 }

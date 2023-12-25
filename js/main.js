@@ -75,6 +75,8 @@ document.addEventListener('DOMContentLoaded',function(event){
   
 	function screenTwo() {
 	
+		document.querySelector("body").classList.add("screen2");
+
 		document.querySelector("#screen1").classList.add("hide");
 		document.querySelector("#screen2").classList.remove("hide");
 

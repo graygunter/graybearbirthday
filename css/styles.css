@@ -14,7 +14,7 @@ body.screen2 {
     color: #f4f4f4;
     display: block;
     font-family: 'Pixelify Sans', sans-serif;
-    font-size: 3EM;
+    font-size: 1.5em;
     margin: 0 auto;
     position: relative;
     width: 70%;
@@ -65,9 +65,10 @@ p.three span span {
 
 #screen2 .container {
   background: url(img/screen2.png) #b0b0b0 no-repeat center;
+  background-size: contain;
   border: 5px solid #000;
   color: #2c2c2c;
-  padding: 1%;
+  padding: 5%;
   text-align: center;
 }
 
@@ -82,7 +83,7 @@ p.three span span {
 #screen3 .container {
   color: #9c9c9c;
   font-family: 'Nanum Gothic Coding', monospace;
-  font-size: 2.5em;
+  font-size: 1em;
   font-weight: 500;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -90,7 +91,7 @@ p.three span span {
 
 #screen3 .container p {
   margin: 0;
-  padding: 0 0 10px 0;
+  padding: 0 0 5px 0;
 }
 
 #screen3 .container .indent {

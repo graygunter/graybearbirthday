@@ -17,7 +17,7 @@ body.screen2 {
     font-size: 1.5em;
     margin: 0 auto;
     position: relative;
-    width: 70%;
+    width: 90%;
     max-width: 1000px;
     z-index: 2;
 }
@@ -87,7 +87,6 @@ p.three span span {
   font-weight: 500;
   letter-spacing: 1px;
   text-transform: uppercase;
-  width: 90%;
 }
 
 #screen3 .container p {

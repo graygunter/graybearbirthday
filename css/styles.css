@@ -7,6 +7,7 @@ body {
 body.screen2 {
   background: blue;
   color: #f4f4f4;
+  padding-top: 5%;
 }
 
 .container {
@@ -27,6 +28,10 @@ body.screen2 {
 
 .blink {
     animation: blinker 1s linear infinite;
+}
+
+.blink2 {
+  animation: blinker 5s linear infinite;
 }
 
 @keyframes blinker {
@@ -59,7 +64,7 @@ p.three span span {
 }
 
 #screen2 .container {
-  background: url(img/screen2.png) #858585 no-repeat center;
+  background: url(img/screen2.png) #b0b0b0 no-repeat center;
   border: 5px solid #000;
   color: #2c2c2c;
   padding: 1%;
@@ -75,9 +80,10 @@ p.three span span {
 }
 
 #screen3 .container {
-  color: #d6d6d6;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.75em;
+  color: #9c9c9c;
+  font-family: 'Nanum Gothic Coding', monospace;
+  font-size: 2.5em;
+  font-weight: 500;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -88,7 +94,7 @@ p.three span span {
 }
 
 #screen3 .container .indent {
-  padding-left: 1%;
+  padding-left: 5%;
 }
 
 #screen3 .container .white {

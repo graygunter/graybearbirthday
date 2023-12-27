@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded',function(event){
 
           setTimeout(function() {document.querySelector("p.two").classList.remove("hide")}, 1000);
 
-          setTimeout(function() {document.querySelector("p.two span").innerHTML = text.substring(0, i+1) +'<span></span>'}, 2000);
+          setTimeout(function() {document.querySelector("p.two span").innerHTML = text.substring(0, i+1) +'<span></span>'}, 1500);
         }
 
         if(loop == 2) {
@@ -30,9 +30,9 @@ document.addEventListener('DOMContentLoaded',function(event){
 
           setTimeout(function() {document.querySelector("p.three").classList.remove("hide")}, 2000);
 
-          setTimeout(function() {document.querySelector("p.three span").innerHTML = text.substring(0, i+1) +'<span></span>'}, 3000);
+          setTimeout(function() {document.querySelector("p.three span").innerHTML = text.substring(0, i+1) +'<span></span>'}, 2000);
 
-          setTimeout(screenTwo, 6000);
+          setTimeout(screenTwo, 5000);
 
         }
   

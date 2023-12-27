@@ -1,16 +1,18 @@
 document.addEventListener('DOMContentLoaded',function(event){
     // array with texts to type in typewriter
-    var dataText = ["CD BIRTHDAY", "RUN BASIC_BITCH_BIRTHDAY.EXE", "..."];
+    let dataText = ["CD BIRTHDAY", "RUN BASIC_BITCH_BIRTHDAY.EXE", "..."];
     
-    var loop = 0;
+    let loop = 0;
+
+		let keyboard = new Audio('./sfx/keyboard.mp3');
 
     // type one text in the typwriter
     // keeps calling itself until the text is finished
     function typeWriter(text, i, fnCallback) {
 
-      // chekc if text isn't finished yet
+      // check if text isn't finished yet
       if (i < (text.length)) {
-        // add next character to h1
+        // add next character
         
         if(loop == 0)
           document.querySelector("p.one span").innerHTML = text.substring(0, i+1) +'<span></span>';
@@ -35,10 +37,15 @@ document.addEventListener('DOMContentLoaded',function(event){
           setTimeout(screenTwo, 5000);
 
         }
+
+				setTimeout(function() {
+					keyboard.play();
+					
+				}, 1);
   
         // wait for a while and call this function again for next character
         setTimeout(function() {
-          typeWriter(text, i + 1, fnCallback)
+          typeWriter(text, i + 1, fnCallback);
         }, 100);
       }
       // text finished, call callback if there is a callback function
@@ -51,7 +58,7 @@ document.addEventListener('DOMContentLoaded',function(event){
     // start a typewriter animation for a text in the dataText array
      function StartTextAnimation(i) {
 
-       console.log("loop = " + loop);
+      console.log("loop = " + loop);
 
 			if(loop < dataText.length) {
 				if (typeof dataText[i] == 'undefined'){
@@ -62,10 +69,11 @@ document.addEventListener('DOMContentLoaded',function(event){
 				// check if dataText[i] exists
 				if (i < dataText[i].length) {
 					// text exists! start typewriter animation
-				typeWriter(dataText[i], 0, function(){
-					// after callback (and whole text has been animated), start next text
-					StartTextAnimation(i + 1);
-				});
+					typeWriter(dataText[i], 0, function(){
+						// after callback (and whole text has been animated), start next text
+						StartTextAnimation(i + 1);
+						keyboard.play();
+					});
 				}
 			}
     }

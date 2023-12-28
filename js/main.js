@@ -48,7 +48,6 @@ document.addEventListener('DOMContentLoaded',function(event){
 
           setTimeout(function() {
 						document.querySelector("p.two span").innerHTML = text.substring(0, i+1) +'<span></span>';
-						keyboard.pause();
 						keyboard.play();
 					}, 1500);
         }

@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded',function(event){
 
 	document.querySelector("#screen0 button").addEventListener("click", function() {
 
-		click.play();
+		screen2.play();
 
 		setTimeout(function() {screenOne()}, 500);
 

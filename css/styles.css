@@ -10,6 +10,12 @@ body.screen2 {
   padding-top: 5%;
 }
 
+body.screen3 {
+  background: blue;
+  color: #f4f4f4;
+  margin: 0;
+}
+
 .container {
     color: #f4f4f4;
     display: block;
@@ -103,6 +109,17 @@ p.three span span {
 
 #screen2 .container .secondary {
   font-size: 1.5em;
+}
+
+#screen3 #menu-bar {
+  background-color: #9c9c9c;
+  color: #000;
+  display: flex;
+  font-family: 'Pixelify Sans', sans-serif;
+  font-size: 2rem;
+  justify-content: space-evenly;
+  margin-bottom: 3%;
+  padding: 5px 0 5px;
 }
 
 #screen3 .container {

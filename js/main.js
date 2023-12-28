@@ -113,13 +113,16 @@ document.addEventListener('DOMContentLoaded',function(event){
 
 		screen2.play();
 
-		setTimeout(screenThree, 6000);
+		setTimeout(screenThree, 4500);
 
 	}
 
 	function screenThree() {
 	
 		screen3.play();
+
+		document.querySelector("body").classList.remove("screen2");
+		document.querySelector("body").classList.add("screen3");
 
 		document.querySelector("#screen2").classList.add("hide");
 		document.querySelector("#screen3").classList.remove("hide");

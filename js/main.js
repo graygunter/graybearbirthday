@@ -1,6 +1,8 @@
+let click = new Audio('./sfx/click.mp3');
 let keyboard = new Audio('./sfx/keyboard.mp3');
 let countdown = new Audio('./sfx/countdown.mp3');
 let screen2 = new Audio('./sfx/screen2.mp3');
+let screen3 = new Audio('./sfx/screen3.mp3');
 
 // array with texts to type in typewriter
 let dataText = ["CD BIRTHDAY", "RUN BASIC_BITCH_BIRTHDAY.EXE", "..."];
@@ -9,8 +11,13 @@ let loop = 0;
 
 document.addEventListener('DOMContentLoaded',function(event){
 
+	document.querySelector("#screen0 button").addEventListener("click", function() {
 
-});
+		click.play();
+
+		setTimeout(function() {screenOne()}, 500);
+
+	});
 
 	function screenOne() {
     // type one text in the typwriter
@@ -112,9 +119,12 @@ document.addEventListener('DOMContentLoaded',function(event){
 
 	function screenThree() {
 	
+		screen3.play();
+
 		document.querySelector("#screen2").classList.add("hide");
 		document.querySelector("#screen3").classList.remove("hide");
 
 		stop();
 
 	}
+});

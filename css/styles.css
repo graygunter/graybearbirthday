@@ -35,6 +35,7 @@ body.screen2 {
   border: 2px solid #575757;
   border-radius: 10px;
   color: #bc0000;
+  cursor: pointer;
   display: block;
   font-family: 'Ubuntu Mono', monospace;
   font-size: 3rem;
@@ -43,6 +44,11 @@ body.screen2 {
   padding: 5%;
   text-align: center;
   width: 50%;
+}
+
+#screen0 button:hover {
+  padding: 4.5%;
+  width: 49%;
 }
 
 .blink {

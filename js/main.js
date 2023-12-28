@@ -1,10 +1,12 @@
+let keyboard = new Audio('./sfx/keyboard.mp3');
+let countdown = new Audio('./sfx/countdown.mp3');
+var screen2 = new Audio('./sfx/screen2.mp3');
+
 document.addEventListener('DOMContentLoaded',function(event){
     // array with texts to type in typewriter
     let dataText = ["CD BIRTHDAY", "RUN BASIC_BITCH_BIRTHDAY.EXE", "..."];
     
     let loop = 0;
-
-		let keyboard = new Audio('./sfx/keyboard.mp3');
 
     // type one text in the typwriter
     // keeps calling itself until the text is finished
@@ -13,17 +15,26 @@ document.addEventListener('DOMContentLoaded',function(event){
       // check if text isn't finished yet
       if (i < (text.length)) {
         // add next character
-        
-        if(loop == 0)
+        if(loop == 0) {
+					keyboard.pause();
+					keyboard.play();
+
           document.querySelector("p.one span").innerHTML = text.substring(0, i+1) +'<span></span>';
+				}
           
         if(loop == 1) {
 
 					document.querySelector("p.one span span").classList.add("hide");
 
-          setTimeout(function() {document.querySelector("p.two").classList.remove("hide")}, 1000);
+          setTimeout(function() {
+						document.querySelector("p.two").classList.remove("hide")
+					}, 1000);
 
-          setTimeout(function() {document.querySelector("p.two span").innerHTML = text.substring(0, i+1) +'<span></span>'}, 1500);
+          setTimeout(function() {
+						document.querySelector("p.two span").innerHTML = text.substring(0, i+1) +'<span></span>';
+						keyboard.pause();
+						keyboard.play();
+					}, 1500);
         }
 
         if(loop == 2) {
@@ -32,16 +43,13 @@ document.addEventListener('DOMContentLoaded',function(event){
 
           setTimeout(function() {document.querySelector("p.three").classList.remove("hide")}, 2000);
 
-          setTimeout(function() {document.querySelector("p.three span").innerHTML = text.substring(0, i+1) +'<span></span>'}, 2000);
+          setTimeout(function() {
+						document.querySelector("p.three span").innerHTML = text.substring(0, i+1) +'<span></span>';
+						countdown.play();
+					}, 2000);
 
           setTimeout(screenTwo, 5000);
-
         }
-
-				setTimeout(function() {
-					keyboard.play();
-					
-				}, 1);
   
         // wait for a while and call this function again for next character
         setTimeout(function() {
@@ -72,7 +80,6 @@ document.addEventListener('DOMContentLoaded',function(event){
 					typeWriter(dataText[i], 0, function(){
 						// after callback (and whole text has been animated), start next text
 						StartTextAnimation(i + 1);
-						keyboard.play();
 					});
 				}
 			}
@@ -87,6 +94,8 @@ document.addEventListener('DOMContentLoaded',function(event){
 
 		document.querySelector("#screen1").classList.add("hide");
 		document.querySelector("#screen2").classList.remove("hide");
+
+		screen2.play();
 
 		setTimeout(screenThree, 6000);
 

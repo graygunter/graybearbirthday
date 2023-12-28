@@ -26,6 +26,25 @@ body.screen2 {
     display: none !important;
 }
 
+#screen0 {
+  padding-top: 10%;
+}
+
+#screen0 button {
+  background-color: #2c2c2c;
+  border: 2px solid #575757;
+  border-radius: 10px;
+  color: #bc0000;
+  display: block;
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 3rem;
+  letter-spacing: 5px;
+  margin: 0 auto;
+  padding: 5%;
+  text-align: center;
+  width: 50%;
+}
+
 .blink {
     animation: blinker 1s linear infinite;
 }
@@ -54,7 +73,6 @@ p.three span span {
         border-color: transparent;
     }
 }
-
 
 #screen1 {
   color: #f4f4f4;

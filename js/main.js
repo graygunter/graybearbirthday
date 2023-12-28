@@ -1,15 +1,24 @@
 let keyboard = new Audio('./sfx/keyboard.mp3');
 let countdown = new Audio('./sfx/countdown.mp3');
-var screen2 = new Audio('./sfx/screen2.mp3');
+let screen2 = new Audio('./sfx/screen2.mp3');
+
+// array with texts to type in typewriter
+let dataText = ["CD BIRTHDAY", "RUN BASIC_BITCH_BIRTHDAY.EXE", "..."];
+
+let loop = 0;
 
 document.addEventListener('DOMContentLoaded',function(event){
-    // array with texts to type in typewriter
-    let dataText = ["CD BIRTHDAY", "RUN BASIC_BITCH_BIRTHDAY.EXE", "..."];
-    
-    let loop = 0;
 
+
+});
+
+	function screenOne() {
     // type one text in the typwriter
     // keeps calling itself until the text is finished
+
+		document.querySelector("#screen0").classList.add("hide");
+		document.querySelector("#screen1").classList.remove("hide");
+
     function typeWriter(text, i, fnCallback) {
 
       // check if text isn't finished yet
@@ -86,7 +95,7 @@ document.addEventListener('DOMContentLoaded',function(event){
     }
     // start the text animation
     setTimeout(function() {StartTextAnimation(0)}, 1000);
-  });
+	}
   
 	function screenTwo() {
 	

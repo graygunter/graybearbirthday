@@ -1,6 +1,5 @@
 body {
-  background-color: #042c00;
-  background: url(img/noise.jpg) repeat;
+  background: url(img/noise.jpg) repeat #042c00;
   position: relative;
 }
 

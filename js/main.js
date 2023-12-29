@@ -1,6 +1,7 @@
 let click = new Audio('./sfx/click.mp3');
 let keyboard = new Audio('./sfx/keyboard.mp3');
 let countdown = new Audio('./sfx/countdown.mp3');
+let screen1 = new Audio('./sfx/screen1.mp3');
 let screen2 = new Audio('./sfx/screen2.mp3');
 let screen3 = new Audio('./sfx/screen3.mp3');
 
@@ -13,7 +14,7 @@ document.addEventListener('DOMContentLoaded',function(event){
 
 	document.querySelector("#screen0 button").addEventListener("click", function() {
 
-		screen2.play();
+		screen1.play();
 
 		setTimeout(function() {screenOne()}, 500);
 

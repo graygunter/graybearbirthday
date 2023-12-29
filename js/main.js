@@ -23,6 +23,8 @@ document.addEventListener('DOMContentLoaded',function(event){
     // type one text in the typwriter
     // keeps calling itself until the text is finished
 
+		screen2.pause();
+
 		document.querySelector("#screen0").classList.add("hide");
 		document.querySelector("#screen1").classList.remove("hide");
 

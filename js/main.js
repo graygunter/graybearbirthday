@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded',function(event){
 
 	document.querySelector("#screen0 button").addEventListener("click", function() {
 
-		screen1.play();
+		screen2.play();
 
 		setTimeout(function() {screenOne()}, 500);
 
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded',function(event){
     // type one text in the typwriter
     // keeps calling itself until the text is finished
 
-		screen1.pause();
+		screen2.pause();
 
 		document.querySelector("#screen0").classList.add("hide");
 		document.querySelector("#screen1").classList.remove("hide");

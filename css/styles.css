@@ -53,6 +53,7 @@ body.screen3 {
 }
 
 #screen0 button:hover {
+  margin-bottom: 5%;
   padding: 4.5%;
   width: 49%;
 }

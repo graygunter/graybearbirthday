@@ -5,7 +5,7 @@ let screen2 = new Audio('./sfx/screen2.mp3');
 let screen3 = new Audio('./sfx/screen3.mp3');
 
 // array with texts to type in typewriter
-let dataText = ["CD BIRTHDAY", "RUN BASIC_BITCH_BIRTHDAY.EXE", "..."];
+let dataText = ["CD BIRTHDAY", "RUN BASIC_BIRTHDAY.EXE", "..."];
 
 let loop = 0;
 
